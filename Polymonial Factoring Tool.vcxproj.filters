@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Factoring">
+      <UniqueIdentifier>{acc3bbf8-5d69-43dc-b1d3-8f0618bd1f97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Factoring">
+      <UniqueIdentifier>{86abd7fb-652c-4ad1-ab8f-e66b2251da1e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="identify.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Solving.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Grouping.cpp">
+      <Filter>Source Files\Factoring</Filter>
+    </ClCompile>
+    <ClCompile Include="GCF.cpp">
+      <Filter>Source Files\Factoring</Filter>
+    </ClCompile>
+    <ClCompile Include="FactoringTrinomials.cpp">
+      <Filter>Source Files\Factoring</Filter>
+    </ClCompile>
+    <ClCompile Include="DifferenceOfTwoSquares.cpp">
+      <Filter>Source Files\Factoring</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="identify.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Solving.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GCF.h">
+      <Filter>Header Files\Factoring</Filter>
+    </ClInclude>
+    <ClInclude Include="Grouping.h">
+      <Filter>Header Files\Factoring</Filter>
+    </ClInclude>
+    <ClInclude Include="FactoringTrinomials.h">
+      <Filter>Header Files\Factoring</Filter>
+    </ClInclude>
+    <ClInclude Include="DifferenceOfTwoSquares.h">
+      <Filter>Header Files\Factoring</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
