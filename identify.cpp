@@ -56,6 +56,6 @@ void identify::set_method()
 	}
 	else if (identify::polynomial_type == 3)
 		identify::factoring_method_extent = 2;
-	else if (identify::_action == true)
+    if (identify::_action == true)
 		identify::factoring_method_extent += 5;
 }
