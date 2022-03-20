@@ -91,10 +91,12 @@ int GCF::getGCF()
 std::string GCF::getOutput()
 {
     output = input;
-    if (gcd == 1) 
+    plainOutput = output;
+
+    if (gcd == 1 || gcd == 0)
         return output;    
     else {
-        char exp;
+        char exp = ' ';
         for (int i = 0; i < output.length(); i++) {
             if (output.at(i) == '^') {
                 i++;
@@ -103,8 +105,13 @@ std::string GCF::getOutput()
             }
         }
 
-        for (int i = 0; i < counter; i++)
-            output = std::regex_replace(output, std::regex(std::to_string(nums[i])), std::to_string(nums[i] / gcd));
+        for (int i = 0; i < counter; i++) {
+            if(nums[i] < 0 && gcd < 0)
+                output = std::regex_replace(output, std::regex(std::to_string(nums[i])), "+" + std::to_string(nums[i] / gcd));
+            else
+                output = std::regex_replace(output, std::regex(std::to_string(nums[i])), std::to_string(nums[i] / gcd));
+        }
+
 
         for (int i = 0; i < output.length(); i++) {
            if (output.at(i) == '|') {
@@ -112,6 +119,15 @@ std::string GCF::getOutput()
            }
         }
 
+        for (int i = 0; i < output.length(); i++) {
+            if (output.at(i) == '-' && output.at(i + 1) == '-') {
+                output.at(i) = '|';
+                output.at(i + 1) = '+';
+            }
+        }
+        output.erase(remove(output.begin(), output.end(), '|'), output.end());
+        plainOutput = output;
+ 
         if (extent < 5)
             output = std::to_string(gcd) + "(" + output + ")";
 

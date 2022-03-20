@@ -3,6 +3,7 @@
 #include "identify.h"
 
 #include "GCF.h"
+#include "Grouping.h"
 
 int main() {
 	std::string exitstr;
@@ -33,10 +34,20 @@ int main() {
 		std::cout << get_type.polynomial_type << " that must be factored by the method of " << get_type.factoring_method_extent << "\n\n";
 		
 		GCF gcf(get_type.output, get_type.factoring_method_extent);
-		gcf.getGCF();
-		gcf.getOutput();
+		if (get_type.factoring_method_extent != 1) {
+			gcf.getGCF();
+			gcf.getOutput();
+			std::cout << "GCF : " << gcf.gcd <<" - Output : " << gcf.output << std::endl;
+		}
 
-		std::cout << "GCF Output : " << gcf.output << std::endl;
+
+		if (get_type.factoring_method_extent == 1) {
+			Grouping group(get_type.output);
+			group.seperateInput();
+			group.getCommonFactors();
+
+			std::cout << "Grouping Output : " << group.output[0] + group.output[1] << std::endl;
+		}
 
 		std::cout << "\n\nWould you like to do another one? y/n:";
 		std::cin >> exitstr;

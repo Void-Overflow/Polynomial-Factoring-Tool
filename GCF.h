@@ -12,6 +12,7 @@ private:
 	int nums[32];
 public:
 	std::string output;
+	std::string plainOutput;
 	int gcd;
 
 	GCF(std::string in, int extent);
