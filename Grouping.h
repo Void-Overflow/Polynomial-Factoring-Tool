@@ -4,7 +4,7 @@
 #include <string>
 
 class Grouping {
-protected:
+private:
 	std::string _input;
 	std::string _seperatedInput[2];
 

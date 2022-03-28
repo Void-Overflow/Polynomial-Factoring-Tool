@@ -4,6 +4,7 @@
 
 #include "GCF.h"
 #include "Grouping.h"
+#include "FactoringTrinomials.h"
 
 int main() {
 	std::string exitstr;
@@ -47,6 +48,17 @@ int main() {
 			group.getCommonFactors();
 
 			std::cout << "Grouping Output : " << group.output[0] + group.output[1] << std::endl;
+		}
+
+		else if (get_type.factoring_method_extent == 4 || get_type.factoring_method_extent == 5) {
+			Factoring_Trinomials trinomials(gcf.plainOutput, get_type.factoring_method_extent);
+			trinomials.getFactorsOfC();
+			trinomials.getOutput();
+
+			if(gcf.gcd != 1 && trinomials.output != "PRIME")
+				std::cout << "Trinomial Factoring Output : " << gcf.gcd << trinomials.output << std::endl;
+			else
+				std::cout << "Trinomial Factoring Output : " << trinomials.output << std::endl;
 		}
 
 		std::cout << "\n\nWould you like to do another one? y/n:";
