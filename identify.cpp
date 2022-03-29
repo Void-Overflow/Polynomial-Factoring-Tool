@@ -12,7 +12,7 @@ void identify::set_type()
 {
 	size_t amtOfSigns = std::count(_input.begin(), _input.end(), '-') + std::count(_input.begin(), _input.end(), '+');
 	
-	if (_input.at(0) == '-')
+	if (_input.at(0) == '-' || _input.at(0) == '+')
 		amtOfSigns--;
 
 	if (amtOfSigns == 0) 

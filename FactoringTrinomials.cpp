@@ -25,27 +25,46 @@ void Factoring_Trinomials::getFactorsOfC()
 	int b = 0;
 
 	bool NegativeFlag = false;
-
-	if (_extent == false) {
-		for (int i = 0; i < _input.length(); i++) {
-			if (_input.at(i) == '+' || _input.at(i) == '-') {
-				counter++;
-				if (counter == 2) {
-					_cStartIndex = i;
-					if (_input.at(i) == '-')
-						NegativeFlag = true;
-					for (int x = 0; x < _input.length() - (i + 1); x++) 
-						Vals += _input.at(i + (x + 1));
-				}
+	for (int i = 0; i < _input.length(); i++) {
+		if (_input.at(i) == '+' || _input.at(i) == '-') {
+			counter++;
+			if (counter == 2) {
+				_cStartIndex = i;
+				if (_input.at(i) == '-')
+					NegativeFlag = true;
+				for (int x = 0; x < _input.length() - (i + 1); x++)
+					Vals += _input.at(i + (x + 1));
 			}
 		}
 	}
-	else {} //When A isn't 1 -- extent is 5
-	
+
 	if (NegativeFlag == true)
 		c = -std::stoi(Vals);
 	else
 		c = std::stoi(Vals);
+
+	if (_extent == true) { //When A isn't 1 -- extent is 3
+		Vals = "";
+		int a = 0;
+		for (int i = 0; i < _input.length(); i++) {
+			if (_input.at(i) == '^') {
+				if (_input.at(0) == '-') {
+					Vals.assign(_input, 1, i - 1);
+					a = -std::stoi(Vals);
+				}
+				else if(_input.at(0) == '+'){
+					Vals.assign(_input, 1, i - 1);
+					a = std::stoi(Vals);
+				}
+				else {
+					Vals.assign(_input, 0, i - 1);
+					a = std::stoi(Vals);
+				}
+				break;
+			}
+		}
+		c*=a;
+	} 
 
 	counter = 0;
 	Vals = "";
@@ -98,7 +117,7 @@ void Factoring_Trinomials::getOutput()
 		}
 
 		if (_factorsOfC[0] < 0)
-			groupingInput = inputSubStrs[0] + std::to_string(_factorsOfC[0]) + "x";// +std::to_string(_factorsOfC[1]) + "x" + inputSubStrs[1];
+			groupingInput = inputSubStrs[0] + std::to_string(_factorsOfC[0]) + "x";
 		else
 			groupingInput = inputSubStrs[0] + "+" + std::to_string(_factorsOfC[0]) + "x" + std::to_string(_factorsOfC[1]) + "x" + inputSubStrs[1];
 

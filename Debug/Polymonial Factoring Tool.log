@@ -1,2 +1,7 @@
-﻿  main.cpp
+﻿  FactoringTrinomials.cpp
+C:\Users\dehla\Desktop\Visual Studio Projects\C++\Polymonial Factoring Tool\FactoringTrinomials.cpp(28,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\dehla\Desktop\Visual Studio Projects\C++\Polymonial Factoring Tool\FactoringTrinomials.cpp(35,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\dehla\Desktop\Visual Studio Projects\C++\Polymonial Factoring Tool\FactoringTrinomials.cpp(49,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\dehla\Desktop\Visual Studio Projects\C++\Polymonial Factoring Tool\FactoringTrinomials.cpp(79,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\dehla\Desktop\Visual Studio Projects\C++\Polymonial Factoring Tool\FactoringTrinomials.cpp(111,21): warning C4018: '<': signed/unsigned mismatch
   Polymonial Factoring Tool.vcxproj -> C:\Users\dehla\Desktop\Visual Studio Projects\C++\Polymonial Factoring Tool\Debug\Polymonial Factoring Tool.exe

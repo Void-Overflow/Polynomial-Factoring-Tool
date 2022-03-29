@@ -50,7 +50,7 @@ int main() {
 			std::cout << "Grouping Output : " << group.output[0] + group.output[1] << std::endl;
 		}
 
-		else if (get_type.factoring_method_extent == 4 || get_type.factoring_method_extent == 5) {
+		else if (get_type.factoring_method_extent == 4 || get_type.factoring_method_extent == 3) {
 			Factoring_Trinomials trinomials(gcf.plainOutput, get_type.factoring_method_extent);
 			trinomials.getFactorsOfC();
 			trinomials.getOutput();
