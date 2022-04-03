@@ -5,6 +5,7 @@
 #include "GCF.h"
 #include "Grouping.h"
 #include "FactoringTrinomials.h"
+#include "DifferenceOfTwoSquares.h"
 
 int main() {
 	std::string exitstr;
@@ -35,7 +36,7 @@ int main() {
 		std::cout << get_type.polynomial_type << " that must be factored by the method of " << get_type.factoring_method_extent << "\n\n";
 		
 		GCF gcf(get_type.output, get_type.factoring_method_extent);
-		if (get_type.factoring_method_extent != 1) {
+		if (get_type.factoring_method_extent != 1 && get_type.factoring_method_extent != 2) {
 			gcf.getGCF();
 			gcf.getOutput();
 			std::cout << "GCF : " << gcf.gcd <<" - Output : " << gcf.output << std::endl;
@@ -59,6 +60,14 @@ int main() {
 				std::cout << "Trinomial Factoring Output : " << gcf.gcd << trinomials.output << std::endl;
 			else
 				std::cout << "Trinomial Factoring Output : " << trinomials.output << std::endl;
+		}
+
+		else if (get_type.factoring_method_extent == 2) {
+			DifferenceOfTwoSquares DOTS(get_type.output);
+			DOTS.getSquares();
+			DOTS.getOutput();
+
+			std::cout << "Difference of Two Squares Factoring Output : " << DOTS.output[0] << DOTS.output[1] << std::endl;
 		}
 
 		std::cout << "\n\nWould you like to do another one? y/n:";
