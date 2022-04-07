@@ -6,6 +6,7 @@
 #include "Grouping.h"
 #include "FactoringTrinomials.h"
 #include "DifferenceOfTwoSquares.h"
+#include "Solving.h"
 
 int main() {
 	std::string exitstr;
@@ -24,13 +25,15 @@ int main() {
 		std::cin >> action_in; std::cout << '\n';
 
 		if (action_in == 's')
-			action = 1;
+			action = true;
 		else
-			action = 0;
+			action = false;
 
-		identify get_type(usr_input, action);
+		identify get_type(usr_input);
 		get_type.set_type();
 		get_type.set_method();
+
+		Solving getRoots;
 
 		std::cout << "Output after identifying:" << get_type.output << '\n';
 		std::cout << get_type.polynomial_type << " that must be factored by the method of " << get_type.factoring_method_extent << "\n\n";
@@ -49,6 +52,16 @@ int main() {
 			group.getCommonFactors();
 
 			std::cout << "Grouping Output : " << group.output[0] + group.output[1] << std::endl;
+
+			if (action == true) {
+				getRoots.input[0] = group.output[0];
+				getRoots.input[1] = group.output[1];
+
+				getRoots.getTerms();
+				getRoots.getOutput();
+
+				std::cout << "Solving : X = " + getRoots.output[0] + " ; X = " + getRoots.output[1] << std::endl;
+			}
 		}
 
 		else if (get_type.factoring_method_extent == 4 || get_type.factoring_method_extent == 3) {
@@ -56,10 +69,20 @@ int main() {
 			trinomials.getFactorsOfC();
 			trinomials.getOutput();
 
-			if(gcf.gcd != 1 && trinomials.output != "PRIME")
-				std::cout << "Trinomial Factoring Output : " << gcf.gcd << trinomials.output << std::endl;
+			if(gcf.gcd != 1 && trinomials.output[0] != "PRIME")
+				std::cout << "Trinomial Factoring Output : " << gcf.gcd << trinomials.output[0] + trinomials.output[1] << std::endl;
 			else
-				std::cout << "Trinomial Factoring Output : " << trinomials.output << std::endl;
+				std::cout << "Trinomial Factoring Output : " << trinomials.output[0] + trinomials.output[1] << std::endl;
+
+			if (action == true) {
+				getRoots.input[0] = trinomials.output[0];
+				getRoots.input[1] = trinomials.output[1];
+
+				getRoots.getTerms();
+				getRoots.getOutput();
+
+				std::cout << "Solving : X = " + getRoots.output[0] + " ; X = " + getRoots.output[1] << std::endl;
+			}
 		}
 
 		else if (get_type.factoring_method_extent == 2) {
@@ -68,6 +91,16 @@ int main() {
 			DOTS.getOutput();
 
 			std::cout << "Difference of Two Squares Factoring Output : " << DOTS.output[0] << DOTS.output[1] << std::endl;
+
+			if (action == true) {
+				getRoots.input[0] = DOTS.output[0];
+				getRoots.input[1] = DOTS.output[1];
+
+				getRoots.getTerms();
+				getRoots.getOutput();
+
+				std::cout << "Solving : X = " + getRoots.output[0] + " ; X = " + getRoots.output[1] << std::endl;
+			}
 		}
 
 		std::cout << "\n\nWould you like to do another one? y/n:";

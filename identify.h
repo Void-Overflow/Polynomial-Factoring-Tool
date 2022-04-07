@@ -7,14 +7,13 @@ class identify
 {
 protected:
 	std::string _input;
-	bool _action;
 public:
 	int polynomial_type; // 0, 1, 2, 3 : Monomial, Binomial, Trinomial, Polynomial
-	int factoring_method_extent; // 0, 1, 2, 3, 4, 5 : GCF, Grouping , Difference of Two Squares, Trinomial-ax^2+bx+c, Trinomial-x+bx+c, Solving
+	int factoring_method_extent; // 0, 1, 2, 3, 4 : GCF, Grouping , Difference of Two Squares, Trinomial-ax^2+bx+c, Trinomial-x+bx+c
 
 	std::string output;
 
-	identify(std::string in, bool action);
+	identify(std::string in);
 
 	void set_type();
 	void set_method(); 

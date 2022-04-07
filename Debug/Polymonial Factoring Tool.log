@@ -1,5 +1,10 @@
-﻿  DifferenceOfTwoSquares.cpp
-C:\Users\dehla\Desktop\Visual Studio Projects\C++\Polymonial Factoring Tool\DifferenceOfTwoSquares.cpp(12,20): warning C4018: '<': signed/unsigned mismatch
-C:\Users\dehla\Desktop\Visual Studio Projects\C++\Polymonial Factoring Tool\DifferenceOfTwoSquares.cpp(30,20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\dehla\Desktop\Visual Studio Projects\C++\Polymonial Factoring Tool\DifferenceOfTwoSquares.cpp(31,20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+﻿  Solving.cpp
+C:\Users\dehla\Desktop\Visual Studio Projects\C++\Polymonial Factoring Tool\Solving.cpp(20,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\dehla\Desktop\Visual Studio Projects\C++\Polymonial Factoring Tool\Solving.cpp(24,26): warning C4018: '<': signed/unsigned mismatch
+C:\Users\dehla\Desktop\Visual Studio Projects\C++\Polymonial Factoring Tool\Solving.cpp(30,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\dehla\Desktop\Visual Studio Projects\C++\Polymonial Factoring Tool\Solving.cpp(37,26): warning C4018: '<': signed/unsigned mismatch
+C:\Users\dehla\Desktop\Visual Studio Projects\C++\Polymonial Factoring Tool\Solving.cpp(49,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\dehla\Desktop\Visual Studio Projects\C++\Polymonial Factoring Tool\Solving.cpp(55,20): warning C4018: '<': signed/unsigned mismatch
+  main.cpp
+  Generating Code...
   Polymonial Factoring Tool.vcxproj -> C:\Users\dehla\Desktop\Visual Studio Projects\C++\Polymonial Factoring Tool\Debug\Polymonial Factoring Tool.exe

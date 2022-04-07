@@ -12,7 +12,7 @@ private:
 	std::string _input;
 	bool _extent;
 public:
-	std::string output;
+	std::string output[2];
 	Factoring_Trinomials(std::string input, int extent);
 
 	void getFactorsOfC();

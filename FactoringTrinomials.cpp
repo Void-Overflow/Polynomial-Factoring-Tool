@@ -83,9 +83,9 @@ void Factoring_Trinomials::getFactorsOfC()
 	}
 
 	if (NegativeFlag == true)
-		b = -std::stoi(Vals);
+		b = -stoi(Vals);
 	else
-		b = std::stoi(Vals);
+		b = stoi(Vals);
 
 	for (int x = -std::abs(c); x <= std::abs(c); x++) {
 		if (x == 0)
@@ -130,8 +130,9 @@ void Factoring_Trinomials::getOutput()
 		group.seperateInput();
 		group.getCommonFactors();
 
-		output = group.output[0] + group.output[1];
+		output[0] = group.output[0];
+		output[1] = group.output[1];
 	}
 	else
-		output = "PRIME";
+		output[0] = "PRIME";
 }

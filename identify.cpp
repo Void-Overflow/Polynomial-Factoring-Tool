@@ -1,11 +1,20 @@
 #include "identify.h"
-identify::identify(std::string in, bool action)
+
+std::string removeCharacters(std::string S, char c)
 {
-	_action = action;
+	S.erase(remove(
+		S.begin(), S.end(), c),
+		S.end());
+
+	return S;
+}
+
+identify::identify(std::string in)
+{
 	_input = in;
 	output = _input;
 
-	std::remove_if(_input.begin(), _input.end(), isspace);
+	_input = removeCharacters(_input, ' ');
 }
 
 void identify::set_type()
@@ -56,6 +65,4 @@ void identify::set_method()
 	}
 	else if (identify::polynomial_type == 3)
 		identify::factoring_method_extent = 1;
-    if (identify::_action == true)
-		identify::factoring_method_extent += 5;
 }
