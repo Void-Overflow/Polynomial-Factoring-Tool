@@ -29,7 +29,8 @@ int main() {
 		else
 			action = false;
 
-		identify get_type(usr_input);
+		identify get_type;
+		get_type.input = usr_input;
 		get_type.set_type();
 		get_type.set_method();
 
@@ -42,7 +43,10 @@ int main() {
 		if (get_type.factoring_method_extent != 1 && get_type.factoring_method_extent != 2) {
 			gcf.getGCF();
 			gcf.getOutput();
-			std::cout << "GCF : " << gcf.gcd <<" - Output : " << gcf.output << std::endl;
+
+			get_type.input = gcf.plainOutput;
+
+			std::cout << "GCF : " << gcf.gcd <<" - Output : " << gcf.output << '\n' << std::endl;
 		}
 
 
@@ -65,6 +69,12 @@ int main() {
 		}
 
 		else if (get_type.factoring_method_extent == 4 || get_type.factoring_method_extent == 3) {
+			get_type.get_vars();
+			get_type.get_vertex();
+			
+			std::cout << "Y-intercept : " << get_type.y_intercept << '\n';
+			std::cout << "Vertex : (" << get_type.vertex[0] << "," << get_type.vertex[1]  << ")\n\n";
+
 			Factoring_Trinomials trinomials(gcf.plainOutput, get_type.factoring_method_extent);
 			trinomials.getFactorsOfC();
 			trinomials.getOutput();
@@ -72,7 +82,7 @@ int main() {
 			if(gcf.gcd != 1 && trinomials.output[0] != "PRIME")
 				std::cout << "Trinomial Factoring Output : " << gcf.gcd << trinomials.output[0] + trinomials.output[1] << std::endl;
 			else
-				std::cout << "Trinomial Factoring Output : " << trinomials.output[0] + trinomials.output[1] << std::endl;
+				std::cout << "Trinomial Factoring Output : " << trinomials.output[0] + trinomials.output[1] << '\n' << std::endl;
 
 			if (action == true) {
 				getRoots.input[0] = trinomials.output[0];

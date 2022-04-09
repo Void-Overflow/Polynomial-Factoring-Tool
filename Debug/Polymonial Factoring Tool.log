@@ -1,10 +1,8 @@
-﻿  Solving.cpp
-C:\Users\dehla\Desktop\Visual Studio Projects\C++\Polymonial Factoring Tool\Solving.cpp(20,20): warning C4018: '<': signed/unsigned mismatch
-C:\Users\dehla\Desktop\Visual Studio Projects\C++\Polymonial Factoring Tool\Solving.cpp(24,26): warning C4018: '<': signed/unsigned mismatch
-C:\Users\dehla\Desktop\Visual Studio Projects\C++\Polymonial Factoring Tool\Solving.cpp(30,20): warning C4018: '<': signed/unsigned mismatch
-C:\Users\dehla\Desktop\Visual Studio Projects\C++\Polymonial Factoring Tool\Solving.cpp(37,26): warning C4018: '<': signed/unsigned mismatch
-C:\Users\dehla\Desktop\Visual Studio Projects\C++\Polymonial Factoring Tool\Solving.cpp(49,20): warning C4018: '<': signed/unsigned mismatch
-C:\Users\dehla\Desktop\Visual Studio Projects\C++\Polymonial Factoring Tool\Solving.cpp(55,20): warning C4018: '<': signed/unsigned mismatch
-  main.cpp
-  Generating Code...
+﻿  identify.cpp
+C:\Users\dehla\Desktop\Visual Studio Projects\C++\Polymonial Factoring Tool\identify.cpp(50,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\dehla\Desktop\Visual Studio Projects\C++\Polymonial Factoring Tool\identify.cpp(79,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\dehla\Desktop\Visual Studio Projects\C++\Polymonial Factoring Tool\identify.cpp(86,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\dehla\Desktop\Visual Studio Projects\C++\Polymonial Factoring Tool\identify.cpp(112,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\dehla\Desktop\Visual Studio Projects\C++\Polymonial Factoring Tool\identify.cpp(127,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\dehla\Desktop\Visual Studio Projects\C++\Polymonial Factoring Tool\identify.cpp(161,76): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
   Polymonial Factoring Tool.vcxproj -> C:\Users\dehla\Desktop\Visual Studio Projects\C++\Polymonial Factoring Tool\Debug\Polymonial Factoring Tool.exe
